@@ -1,5 +1,18 @@
-<div class="start_btn"><button>Start Quiz</button></div>
+<script>
+let questions = [
+  {
+  numb: 1,
+  question: '<%=@questions[0]%>',
+  answer: '<%=@resposta%>',
+  options: [ '<%=@primeira_opção%>',
+  '<%=@segunda_opção%>',
+  '<%=@terceira_opção%>'
 
+
+  ]
+}]
+</script>
+<div class="start_btn"><button>Start Quiz</button></div>
 <!-- Info Box -->
 <div class="info_box">
     <div class="info-title"><span>Some Rules of this Quiz</span></div>

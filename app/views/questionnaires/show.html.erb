@@ -3,22 +3,22 @@
 <div class="row justify-content-center mt-3 mb-5">
   <div class="col-md-3" id="mysite">
 
-<script>
+<%# <script>
 //Switched tab
-  window.onblur = function () {
+  //window.onblur = function () {
     // do some stuff after tab was changed e.g.
-    alert('Are you cheating? You switched the tab.');
+    //alert('Are you cheating? You switched the tab.');
 }
 
   let siteTitle = '';
-  window.addEventListener('blur', () => {
-    siteTitle = document.title;
-    document.title = 'Come back! :c';
+  //window.addEventListener('blur', () => {
+    //siteTitle = document.title;
+    //document.title = 'Come back! :c';
   });
-  window.addEventListener('focus', () => {
-    document.title = siteTitle;
+  //window.addEventListener('focus', () => {
+   // document.title = siteTitle;
   });
-</script>
+</script> %>
 
   <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
   <% if current_user.teacher_role? %>
