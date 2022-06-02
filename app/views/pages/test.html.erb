@@ -6,12 +6,15 @@
   {numb: <%=n+1%>,
   question: '&lt;%=@questions[<%=n%>]%&gt;',
   answer: '&lt;%=@resposta[<%=n%>]%&gt;',
-  options: ['&lt;%=@op<%=(n*4)%>%&gt;','&lt;%=@op<%=(n*4)+1%>%&gt;','&lt;%=@op<%=(n*4)+2%>%&gt;','&lt;%=@op<%=(n*4)+3%>%&gt;']},
+  options: ['&lt;%=@op<%=(n*4)%>%&gt;','&lt;%=@op<%=(n*4)+1%>%&gt;','&lt;%=@op<%=(n*4)+2%>%&gt;',
+  '&lt;%=@op<%=(n*4)+3%>%&gt;']},
 <%end%>
 </div>
 <script>
-let questions = [document.getElementById("javateste").innerHTML
-  ]
+let javastring = document.getElementsByClassName("javateste")[0]
+let texto = javastring.innerText
+let questions = new Array( javastring.innerText, 1)
+
 // {
 //   numb: 1,
 //   question: '<%=@questions[0]%>',
@@ -29,7 +32,7 @@ let questions = [document.getElementById("javateste").innerHTML
 //   '<%=@quinta_opção%>',
 //   '<%=@sexta_opção%>'
 //   ]
-console.log(questions)
+console.log(texto)
 </script>
 <div class="start_btn"><button>Start Quiz</button></div>
 <!-- Info Box -->
