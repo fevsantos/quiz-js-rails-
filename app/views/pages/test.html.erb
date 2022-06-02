@@ -1,16 +1,35 @@
+
+<h1>TESTES</h1>
+<div class='mt-8'>
+<div class="javateste">
+<%@loop.each do |n|%>
+  {numb: <%=n+1%>,
+  question: '&lt;%=@questions[<%=n%>]%&gt;',
+  answer: '&lt;%=@resposta[<%=n%>]%&gt;',
+  options: ['&lt;%=@op<%=(n*4)%>%&gt;','&lt;%=@op<%=(n*4)+1%>%&gt;','&lt;%=@op<%=(n*4)+2%>%&gt;','&lt;%=@op<%=(n*4)+3%>%&gt;']},
+<%end%>
+</div>
 <script>
-let questions = [
-  {
-  numb: 1,
-  question: '<%=@questions[0]%>',
-  answer: '<%=@resposta%>',
-  options: [ '<%=@primeira_opção%>',
-  '<%=@segunda_opção%>',
-  '<%=@terceira_opção%>'
-
-
+let questions = [document.getElementById("javateste").innerHTML
   ]
-}]
+// {
+//   numb: 1,
+//   question: '<%=@questions[0]%>',
+//   answer: '<%=@resposta[0]%>',
+//   options: [ '<%=@primeira_opção%>',
+//   '<%=@segunda_opção%>',
+//   '<%=@terceira_opção%>'
+//   ]
+// },
+// {
+//   numb: 2,
+//   question: '<%=@questions[1]%>',
+//   answer: '<%=@resposta[1]%>',
+//   options: [ '<%=@quarta_opção%>',
+//   '<%=@quinta_opção%>',
+//   '<%=@sexta_opção%>'
+//   ]
+console.log(questions)
 </script>
 <div class="start_btn"><button>Start Quiz</button></div>
 <!-- Info Box -->
